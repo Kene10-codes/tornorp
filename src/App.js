@@ -8,20 +8,19 @@ const Home = React.lazy(() => import('./pages/home/Home'))
 const LoginPage = React.lazy(() => import('./pages/login/LoginPage'))
 const SignupPage = React.lazy(() => import('./pages/signup/SignupPage'))
 
-
-
 function App() {
+  
   return (
     <ErrorBoundary>
-    <Router>
-      <Suspense fallback={<div>Loading...</div>}>
-        <Switch>
-             <Home exact path='/' component={Home} />
-             <SignupPage path='/SignupPage' component={SignupPage} />
-             <LoginPage path='/LoginPage' component={LoginPage} />
-        </Switch>
-      </Suspense>
-    </Router>
+        <Router>
+          <Suspense fallback={<div>Loading...</div>}>
+            <Switch>
+                <Home exact path='/' component={Home} />
+                <SignupPage path='/SignupPage' component={SignupPage} />
+                <LoginPage path='/LoginPage' component={LoginPage} />
+            </Switch>
+          </Suspense>
+        </Router>
     </ErrorBoundary>
   );
 }
