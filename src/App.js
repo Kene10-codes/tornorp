@@ -11,7 +11,7 @@ const SignupPage = React.lazy(() => import('./pages/signup/SignupPage'))
 function App() {
   
   return (
-    <ErrorBoundary>
+    // <ErrorBoundary>
         <Router>
           <Suspense fallback={<div>Loading...</div>}>
             <Switch>
@@ -21,7 +21,7 @@ function App() {
             </Switch>
           </Suspense>
         </Router>
-    </ErrorBoundary>
+    // </ErrorBoundary>
   );
 }
 
