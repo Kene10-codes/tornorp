@@ -1,7 +1,7 @@
 import React, { Suspense } from 'react'
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom'
 import 'bootstrap/dist/css/bootstrap.min.css'
-import ErrorBoundary from './pages/error/ErrorBoundary'
+// import ErrorBoundary from './pages/error/ErrorBoundary'
 import './App.css';
 
 const Home = React.lazy(() => import('./pages/home/Home'))
@@ -11,7 +11,7 @@ const SignupPage = React.lazy(() => import('./pages/signup/SignupPage'))
 function App() {
   
   return (
-    <ErrorBoundary>
+    // <ErrorBoundary>
         <Router>
           <Suspense fallback={<div>Loading...</div>}>
             <Switch>
@@ -21,8 +21,8 @@ function App() {
             </Switch>
           </Suspense>
         </Router>
-    </ErrorBoundary>
-  );
+    // </ErrorBoundary>
+  )
 }
 
 export default App;
