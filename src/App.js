@@ -4,7 +4,7 @@ import 'bootstrap/dist/css/bootstrap.min.css'
 // import ErrorBoundary from './pages/error/ErrorBoundary'
 import './App.css';
 
-const Home = React.lazy(() => import('./pages/home/Home'))
+const Home = React.lazy(() => import('./pages/home/Home.jsx'))
 const LoginPage = React.lazy(() => import('./pages/login/LoginPage'))
 const SignupPage = React.lazy(() => import('./pages/signup/SignupPage'))
 
@@ -15,9 +15,15 @@ function App() {
         <Router>
           <Suspense fallback={<div>Loading...</div>}>
             <Switch>
-                <Home exact path='/' component={Home} />
-                <SignupPage path='/SignupPage' component={SignupPage} />
-                <LoginPage path='/LoginPage' component={LoginPage} />
+              <Route exact path='/'>
+                 <Home />
+              </Route>
+               <Route path='/SignupPage'>
+                  <SignupPage  />
+               </Route>
+               <Route path='/LoginPage'>
+                 <LoginPage />
+               </Route>
             </Switch>
           </Suspense>
         </Router>

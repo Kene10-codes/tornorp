@@ -1,0 +1,49 @@
+.wrapper {
+    background: #070214;
+}
+
+span {
+font-family: SF UI Text;
+font-style: normal;
+font-weight: 800;
+font-size: 18px;
+line-height: 18px;
+align-items: center;
+color: #FFFFFF;
+
+}
+
+li {
+list-style-type: none;
+}
+
+Link {
+font-family: Manrope;
+font-style: normal;
+font-weight: normal;
+font-size: 16px;
+line-height: 26px;
+font-feature-settings: 'liga' off;
+color: #FFFFFF !important;
+flex: none;
+order: 0;
+flex-grow: 0;
+margin: 0px 24px;
+}
+
+p {
+font-family: Manrope;
+font-style: normal;
+font-weight: normal;
+font-size: 14px;
+line-height: 24px;
+font-feature-settings: 'liga' off;
+color: #D9DBE1;
+flex: none;
+order: 3;
+flex-grow: 0;
+margin: 24px 0px;
+display: flex;
+justify-content: center;
+align-items: center;
+}
